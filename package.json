@@ -1,0 +1,30 @@
+{
+  "name": "web",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vinxi dev",
+    "build": "vinxi build",
+    "start": "vinxi start"
+  },
+  "dependencies": {
+    "@pigment-css/react": "^0.0.24",
+    "@pigment-css/vite-plugin": "^0.0.24",
+    "@tanstack/react-router": "^1.61.1",
+    "@tanstack/router-devtools": "^1.61.1",
+    "@tanstack/router-plugin": "^1.60.0",
+    "@tanstack/start": "^1.61.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "vinxi": "^0.4.3"
+  },
+  "devDependencies": {
+    "@types/node": "20.5.1",
+    "@types/react": "^18.2.23",
+    "@types/react-dom": "^18.2.8",
+    "@vitejs/plugin-react": "^4.3.1",
+    "typescript": "5.1.6",
+    "vite": "^5.4.5"
+  }
+}
