@@ -13,7 +13,6 @@
     "@raikou/emotion": "^0.0.16",
     "@raikou/hooks": "^0.0.16",
     "@raikou/system": "^0.0.16",
-    "@stylefusion/vite-plugin": "^0.0.27",
     "@tanstack/react-router": "^1.81.5",
     "@tanstack/start": "^1.81.5",
     "react": "^18.3.1",
@@ -21,6 +20,7 @@
     "vinxi": "^0.4.3"
   },
   "devDependencies": {
+    "@stylefusion/vite-plugin": "^0.0.27",
     "@types/node": "^20.14.10",
     "@types/react": "^18.3.3",
     "@types/react-dom": "^18.3.0",

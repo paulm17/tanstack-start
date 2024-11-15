@@ -32,7 +32,7 @@ export default defineConfig({
       },
     }, 
     ssr: {
-      noExternal: ['@stylefusion/react', '@stylefusion/vite-plugin', '@raikou/core', '@raikou/system'],
+      noExternal: ['@stylefusion/react', '@raikou/core', '@raikou/system'],
     },
   }
 });
