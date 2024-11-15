@@ -3,6 +3,7 @@ import { createRootRoute } from '@tanstack/react-router'
 import { Outlet, ScrollRestoration } from '@tanstack/react-router'
 import { Meta, Scripts } from '@tanstack/start'
 import { RaikouProvider } from '@raikou/system';
+import { emotionTransform, RaikouEmotionProvider } from "@raikou/emotion";
 
 import '@raikou/system/styles.css';
 import '@stylefusion/react/styles.css';

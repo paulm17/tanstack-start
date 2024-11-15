@@ -28,11 +28,11 @@ export default defineConfig({
     resolve: {
       alias: {
         'prop-types': 'prop-types/prop-types.js',
-        'react-is': 'react-is/cjs/react-is.development.js',
+        'react-is': 'react-is/cjs/react-is.development.js',        
       },
     }, 
     ssr: {
       noExternal: ['@stylefusion/react', '@raikou/core', '@raikou/system'],
-    },
+    }
   }
 });
