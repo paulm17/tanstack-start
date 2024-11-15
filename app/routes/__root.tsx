@@ -1,8 +1,7 @@
 import * as React from 'react'
 import { createRootRoute } from '@tanstack/react-router'
 import { Outlet, ScrollRestoration } from '@tanstack/react-router'
-import { Body, Head, Html, Meta, Scripts } from '@tanstack/start'
-import { emotionTransform, RaikouEmotionProvider } from '@raikou/emotion';
+import { Meta, Scripts } from '@tanstack/start'
 import { RaikouProvider } from '@raikou/system';
 
 import '@raikou/system/styles.css';
@@ -27,10 +26,8 @@ export const Route = createRootRoute({
 function RootComponent() {
   return (
     <RootDocument>
-      <RaikouProvider stylesTransform={emotionTransform}>
-        <RaikouEmotionProvider>
-          <Outlet />
-        </RaikouEmotionProvider>
+      <RaikouProvider>
+        <Outlet />
       </RaikouProvider>
     </RootDocument>
   )
@@ -38,15 +35,15 @@ function RootComponent() {
 
 function RootDocument({ children }: { children: React.ReactNode }) {
   return (
-    <Html>
-      <Head>
+    <html>
+      <head>
         <Meta />
-      </Head>
-      <Body>
+      </head>
+      <body>
         {children}
         <ScrollRestoration />
         <Scripts />
-      </Body>
-    </Html>
+      </body>
+    </html>
   )
 }

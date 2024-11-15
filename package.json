@@ -9,11 +9,11 @@
     "start": "vinxi start"
   },
   "dependencies": {
-    "@raikou/core": "^0.0.7",
-    "@raikou/emotion": "^0.0.7",
-    "@raikou/hooks": "^0.0.7",
-    "@raikou/system": "^0.0.7",
-    "@stylefusion/vite-plugin": "^0.0.26",
+    "@raikou/core": "^0.0.16",
+    "@raikou/emotion": "^0.0.16",
+    "@raikou/hooks": "^0.0.16",
+    "@raikou/system": "^0.0.16",
+    "@stylefusion/vite-plugin": "^0.0.27",
     "@tanstack/react-router": "^1.81.5",
     "@tanstack/start": "^1.81.5",
     "react": "^18.3.1",

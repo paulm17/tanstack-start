@@ -31,5 +31,8 @@ export default defineConfig({
         'react-is': 'react-is/cjs/react-is.development.js',
       },
     }, 
+    ssr: {
+      noExternal: ['@stylefusion/react', '@stylefusion/vite-plugin', '@raikou/core', '@raikou/system'],
+    },
   }
 });
