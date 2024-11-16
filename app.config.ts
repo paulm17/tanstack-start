@@ -19,20 +19,30 @@ export default defineConfig({
         atomic: false,
         theme,
         rawTheme,
-        transformLibraries: ['@raikou/core', '@raikou/system'],
+        transformLibraries: ['@raikou/core', '@raikou/system', '@raikou/emotion'],
       }),
     ],
     optimizeDeps: {
-      include: ['prop-types', 'react-is'],
+      include: [
+        '@stylefusion/react', 
+        '@raikou/core', 
+        '@raikou/system', 
+        '@raikou/emotion'
+      ],
     },
     resolve: {
       alias: {
         'prop-types': 'prop-types/prop-types.js',
-        'react-is': 'react-is/cjs/react-is.development.js',        
+        'react-is': 'react-is/cjs/react-is.development.js',
       },
     }, 
     ssr: {
-      noExternal: ['@stylefusion/react', '@raikou/core', '@raikou/system'],
+      noExternal: [
+        '@stylefusion/react', 
+        '@raikou/core', 
+        '@raikou/system', 
+        '@raikou/emotion'
+      ],
     }
   }
 });
