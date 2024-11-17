@@ -2,7 +2,10 @@ import * as React from 'react'
 import { createRootRoute } from '@tanstack/react-router'
 import { Outlet, ScrollRestoration } from '@tanstack/react-router'
 import { Meta, Scripts } from '@tanstack/start'
+import { DefaultCatchBoundary } from '../components/DefaultCatchBoundary'
+import { NotFound } from '../components/NotFound'
 import { RaikouProvider } from '@raikou/system';
+import { TanStackRouterDevtools } from '@tanstack/router-devtools'
 
 import '@raikou/system/styles.css';
 import '@stylefusion/react/styles.css';
@@ -20,6 +23,14 @@ export const Route = createRootRoute({
       title: 'TanStack Form + Start',
     },
   ],
+  errorComponent: (props) => {
+    return (
+      <RootDocument>
+        <DefaultCatchBoundary {...props} />
+      </RootDocument>
+    )
+  },
+  notFoundComponent: () => <NotFound />,
   component: RootComponent,
 })
 
@@ -27,7 +38,7 @@ function RootComponent() {
   return (
     <RootDocument>
       <RaikouProvider>
-          <Outlet />
+        <Outlet />
       </RaikouProvider>
     </RootDocument>
   )
@@ -42,6 +53,7 @@ function RootDocument({ children }: { children: React.ReactNode }) {
       <body>
         {children}
         <ScrollRestoration />
+        <TanStackRouterDevtools position="bottom-right" />
         <Scripts />
       </body>
     </html>
